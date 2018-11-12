@@ -1,5 +1,6 @@
 package com.example.android.newsapp1_revised;
 
+
 import android.app.LoaderManager;
 import android.content.Context;
 import android.content.Intent;
@@ -27,7 +28,7 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
     private static final String LOG_TAG = MainActivity.class.getName();
 
     private static final String GUARDIAN_REQUEST_URL =
-            "https://content.guardianapis.com/search?show-fields=byline&q=music&order-by=newest&from-date=2018-01-01&api-key=12db7c5e-96be-4c1e-939d-4f471104e3f0";
+            "https://content.guardianapis.com/search?";
 
     private static final int NEWS_LOADER_ID = 1;
 
@@ -116,11 +117,14 @@ public class MainActivity extends AppCompatActivity implements LoaderManager.Loa
         Uri.Builder uriBuilder = baseUri.buildUpon();
 
         uriBuilder.appendQueryParameter("show-fields", "byline");
-        uriBuilder.appendQueryParameter("q", "music");
+        uriBuilder.appendQueryParameter("q", "film");
+        uriBuilder.appendQueryParameter("q", "art");
+        uriBuilder.appendQueryParameter("q", "life");
+        uriBuilder.appendQueryParameter("q", "stage");
         uriBuilder.appendQueryParameter("section", categoryChoice);
         uriBuilder.appendQueryParameter("order-by", orderBy);
         uriBuilder.appendQueryParameter("from-date", "2018-01-01");
-        uriBuilder.appendQueryParameter("api-key", "12db7c5e-96be-4c1e-939d-4f471104e3f0");
+        uriBuilder.appendQueryParameter("api key", "12db7c5e-96be-4c1e-939d-4f471104e3f0");
 
 
         return new NewsLoader(this, uriBuilder.toString());
