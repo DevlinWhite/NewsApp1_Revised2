@@ -12,7 +12,7 @@
     <!-- for section preferences -->
     <string name="settings_section_label">Category</string>
     <string name="settings_section_key" translatable="false">section</string>
-    <string name="settings_section_default" translatable="false">music</string>
+    <string name="settings_section_default" translatable="false">art</string>
 
     <!-- Label for music news [CHAR LIMIT=20] -->
     <string name="settings_music_label">Music</string>
